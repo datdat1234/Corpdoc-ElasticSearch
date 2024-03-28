@@ -1,0 +1,165 @@
+- Create file / folder index
+
+PUT /companyId_file
+{
+  "settings": {
+    "number_of_shards": 1,
+    "number_of_replicas": 1
+  },
+  "mappings": {
+    "properties": {
+      "Name": {
+        "type": "text"
+      },
+      "Criteria": {
+        "type": "text"
+      },
+      "CreatedDate": {
+        "type": "date"
+      },
+      "Description": {
+        "type": "text"
+      },
+      "HashValue": {
+        "type": "text"
+      },            
+      "Author": {
+        "type": "text"
+      },
+      "Type": {
+        "type": "text"
+      },
+      "Size": {
+        "type": "long"
+      },
+      "Deleted": {
+        "type": "boolean"
+      },
+      "Status": {
+        "type": "text"
+      },
+      "IsPrivate": {
+        "type": "boolean"
+      },
+      "NewValue": {
+        "type": "object"
+      },
+      "SharedDeptID": {
+        "type": "text"
+      },
+      "DeptID": {
+        "type": "text"
+      },
+      "UploaderID": {
+        "type": "text"
+      },
+      "Path": {
+        "type": "text"
+      },
+      "Body": {
+        "type": "text"
+      }
+    }
+  }
+}
+
+PUT /companyId_folder
+{
+  "settings": {
+    "number_of_shards": 1,
+    "number_of_replicas": 1
+  },
+  "mappings": {
+    "properties": {
+      "Name": {
+        "type": "text"
+      },
+      "Criteria": {
+        "type": "text"
+      },
+      "CreatedDate": {
+        "type": "date"
+      },
+      "Description": {
+        "type": "text"
+      },
+      "Author": {
+        "type": "text"
+      },
+      "Deleted": {
+        "type": "boolean"
+      },
+      "IsPrivate": {
+        "type": "boolean"
+      },
+      "SharedDeptID": {
+        "type": "text"
+      },
+      "DeptID": {
+        "type": "text"
+      },
+      "CreatorID": {
+        "type": "text"
+      }
+    }
+  }
+}
+
+- Add Document
+
+POST /companyId_file/_doc/_id
+{
+  "Name": ,
+  "Criteria": ,
+  "CreatedDate": ,
+  "Description": ,
+  "HashValue": ,            
+  "Author": ,
+  "Type": ,
+  "Size": ,
+  "Deleted": ,
+  "Status": ,
+  "IsPrivate": ,
+  "NewValue": ,
+  "SharedDeptID": ,
+  "DeptID": ,
+  "UploaderID": ,
+  "Path": ,
+  "Body": 
+}
+
+POST /companyId_folder/_doc/_id
+{
+  "Name": ,
+  "Criteria": ,
+  "CreatedDate": ,
+  "Description": ,
+  "Author": ,
+  "Deleted": ,
+  "IsPrivate": ,
+  "SharedDeptID": ,
+  "DeptID": ,
+  "CreatorID": 
+}
+
+- Update Document
+
+POST /companyId_file/_update/_id
+{
+  "doc": {
+    "Criteria": "new_value1",
+  }
+}
+
+POST /companyId_folder/_update/_id
+{
+  "doc": {
+    "Criteria": "new_value1",
+  }
+}
+
+- Get document of index
+
+GET /companyId_file/_doc/<document_id>
+
+GET /companyId_folder/_doc/<document_id>
