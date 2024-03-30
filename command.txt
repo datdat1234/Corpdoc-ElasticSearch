@@ -55,9 +55,6 @@ PUT /companyId_file
       },
       "Path": {
         "type": "text"
-      },
-      "Body": {
-        "type": "text"
       }
     }
   }
@@ -124,8 +121,7 @@ POST /companyId_file/_doc/_id
   "SharedDeptID": ,
   "DeptID": ,
   "UploaderID": ,
-  "Path": ,
-  "Body": 
+  "Path": 
 }
 
 POST /companyId_folder/_doc/_id
@@ -159,6 +155,12 @@ POST /companyId_folder/_update/_id
 }
 
 - Get document of index
+
+GET /companyId_file/_doc/<document_id>
+
+GET /companyId_folder/_doc/<document_id>
+
+- Search Document
 
 GET /companyId_file/_doc/<document_id>
 
