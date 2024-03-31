@@ -8,6 +8,9 @@ PUT /companyId_file
   },
   "mappings": {
     "properties": {
+      "FileID":  {
+        "type": "text"
+      },
       "Name": {
         "type": "text"
       },
@@ -68,6 +71,9 @@ PUT /companyId_folder
   },
   "mappings": {
     "properties": {
+      "FolderID":  {
+        "type": "text"
+      },
       "Name": {
         "type": "text"
       },
@@ -106,6 +112,7 @@ PUT /companyId_folder
 
 POST /companyId_file/_doc/_id
 {
+  "FileID": ,
   "Name": ,
   "Criteria": ,
   "CreatedDate": ,
@@ -126,6 +133,7 @@ POST /companyId_file/_doc/_id
 
 POST /companyId_folder/_doc/_id
 {
+  "FolderID": ,
   "Name": ,
   "Criteria": ,
   "CreatedDate": ,
@@ -160,8 +168,74 @@ GET /companyId_file/_doc/<document_id>
 
 GET /companyId_folder/_doc/<document_id>
 
-- Search Document
+- Get Document by ID
 
 GET /companyId_file/_doc/<document_id>
 
 GET /companyId_folder/_doc/<document_id>
+
+- Search Document
+
+GET /companyId_file/_search
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "age": "40"
+          }
+        }
+      ],
+      "must_not": [
+        { 
+          "match": {
+            "age": "40"
+          }
+        }
+      ],
+      "should": [
+        {
+          "match": {
+            "age": "40"
+          }
+        }
+      ]
+    }
+  }
+}
+
+GET /companyId_folder/_search
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "age": "40"
+          }
+        }
+      ],
+      "must_not": [
+        { 
+          "match": {
+            "age": "40"
+          }
+        }
+      ],
+      "should": [
+        {
+          "match": {
+            "age": "40"
+          }
+        }
+      ]
+    }
+  }
+}
+
+- Utils
+
+// Get indices of ES
+
+GET /_cat/indices?pretty
