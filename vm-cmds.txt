@@ -1,0 +1,103 @@
+////////////////////////////////////////////////////////////
+
+mkdir corpdoc
+
+cd corpdoc/
+
+sudo apt-get install git
+
+mkdir corpdoc-ocr
+mkdir corpdoc-langchain
+mkdir corpdoc-es
+
+cd corpdoc-es/
+git init
+git pull https://github.com/datdat1234/Corpdoc-ElasticSearch.git
+
+cd ..
+cd corpdoc-ocr/
+git init
+git pull https://github.com/nhatha32/Corpdoc-OCR.git
+
+cd ..
+cd corpdoc-langchain/
+git init
+git pull https://github.com/datdat1234/Corpdoc-Langchain.git
+
+sudo apt install tesseract-ocr
+sudo apt-get install python-poppler
+
+sudo apt-get install software-properties-common
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt-get update
+sudo apt-get install python3.8
+
+sudo apt update
+sudo apt install python3-pip
+sudo apt install python3.11-venv
+
+sudo apt update
+sudo apt install apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
+apt-cache policy docker-ce
+sudo apt install docker-ce
+
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+
+cd ..
+cd corpdoc-es/
+sudo docker-compose up -d
+
+sudo apt-get update 
+sudo apt-get upgrade 
+sudo apt-get install screen
+
+////////////////////////////////////////////////////////////
+
+touch .env
+nano .env
+
+cd ..
+cd corpdoc-ocr/
+touch .env
+nano .env
+
+////////////////////////////////////////////////////////////
+
+python3 -m venv .venv
+source .venv/bin/activate
+
+cd corpdoc-ocr/
+python3 -m pip install -r requirements.txt
+
+cd ..
+cd corpdoc-langchain/
+python3 -m pip install -r requirements.txt
+
+////////////////////////////////////////////////////////////
+
+uvicorn src.main:app --reload --port=8000 --host=0.0.0.0
+
+uvicorn src.main:app --reload --port=9000 --host=0.0.0.0
+
+////////////////////////////////////////////////////////////
+
+// Allow http port
+
+80,5601,9200,8000,9000
+
+// Access venv
+
+source .venv/bin/activate
+
+// Open screen
+
+screen
+
+Ctrl + A / Ctrl + D
+
+// Kill screens
+
+screen -ls | grep pts | cut -d. -f1 | awk '{print $1}' | xargs kill

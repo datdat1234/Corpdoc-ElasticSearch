@@ -168,12 +168,6 @@ GET /companyId_file/_doc/<document_id>
 
 GET /companyId_folder/_doc/<document_id>
 
-- Get Document by ID
-
-GET /companyId_file/_doc/<document_id>
-
-GET /companyId_folder/_doc/<document_id>
-
 - Search Document
 
 GET /companyId_file/_search
@@ -239,3 +233,119 @@ GET /companyId_folder/_search
 // Get indices of ES
 
 GET /_cat/indices?pretty
+
+// Insert dummy data
+
+POST /13ed4be3-ae82-4e65-8370-986656fc8e63_folder/_doc/1012645c-7ed3-40ed-bbbe-bae78dac41a1
+{
+  "FolderID": "1012645c-7ed3-40ed-bbbe-bae78dac41a1",
+  "Name": "Công nghệ phần mềm",
+  "Criteria": ["do_an", "cong_nghe_phan_mem"],
+  "CreatedDate": "2024-02-15T00:00:00.000Z",
+  "Description": "Thư mục chứa các đồ án về công nghệ phần mềm",
+  "Author": "PhuocDat",
+  "Deleted": false,
+  "IsPrivate": false,
+  "SharedDeptID": [],
+  "DeptID": "35c3a908-8286-4d65-9a8e-254473447f7c",
+  "CreatorID": "768fcaf1-359b-423b-ba9a-51ca38fcc574"
+}
+
+POST /13ed4be3-ae82-4e65-8370-986656fc8e63_folder/_doc/3eb9d2c7-3717-4d6f-8c11-76ae455b0b04
+{
+  "FolderID": "3eb9d2c7-3717-4d6f-8c11-76ae455b0b04",
+  "Name": "Đồ án tốt nghiệp",
+  "Criteria": ["do_an"],
+  "CreatedDate": "2024-02-15T00:00:00.000Z",
+  "Description": "Thư mục chứa tất cả văn bản đồ án tốt nghiệp",
+  "Author": "PhuocDat",
+  "Deleted": false,
+  "IsPrivate": false,
+  "SharedDeptID": ["4a18307d-a2d4-4c01-b7d1-3da5c08645dc", "94e2f1e0-d9b3-43d9-8747-f8c815500962"],
+  "DeptID": "35c3a908-8286-4d65-9a8e-254473447f7c",
+  "CreatorID": "768fcaf1-359b-423b-ba9a-51ca38fcc574"
+}
+
+POST /13ed4be3-ae82-4e65-8370-986656fc8e63_file/_doc/29fe90c1-1a45-41e7-a528-23c661467ddd
+{
+  "FileID": "29fe90c1-1a45-41e7-a528-23c661467ddd",
+  "Name": "dac_nhan_tam",
+  "Criteria": ["phi_hu_cau", "tu_luc"],
+  "CreatedDate": "2024-02-13T00:00:00.000Z",
+  "Description": "Sách cho nhân viên công ty",
+  "HashValue": "49073ba7b99f5b2ae66dce2baea6e33ce2ddbea8285c0aa75b9f49b7decbe228",            
+  "Author": "MinhChau",
+  "Type": "pdf",
+  "Size": "123",
+  "Deleted": false,
+  "Status": "Active",
+  "IsPrivate": false,
+  "NewValue": null,
+  "SharedDeptID": ["4a18307d-a2d4-4c01-b7d1-3da5c08645dc"],
+  "DeptID": "35c3a908-8286-4d65-9a8e-254473447f7c",
+  "UploaderID": "768fcaf1-359b-423b-ba9a-51ca38fcc574",
+  "Path": null
+}
+
+POST /13ed4be3-ae82-4e65-8370-986656fc8e63_file/_doc/51d9b58d-a83b-4a8c-88f1-c4515663a9a0
+{
+  "FileID": "51d9b58d-a83b-4a8c-88f1-c4515663a9a0",
+  "Name": "do_an_tot_nghiep",
+  "Criteria": ["do_an", "cong_nghe_phan_mem"],
+  "CreatedDate": "2024-02-13T00:00:00.000Z",
+  "Description": "Đồ án tốt nghiệp năm 2023",
+  "HashValue": "70a5f72f45c57af1ba1bb3c84cb648a7a66a08d5e8842b56e0a49bd95f889fa9",            
+  "Author": "PhuocDat",
+  "Type": "pdf",
+  "Size": "12",
+  "Deleted": false,
+  "Status": "Active",
+  "IsPrivate": false,
+  "NewValue": null,
+  "SharedDeptID": ["94e2f1e0-d9b3-43d9-8747-f8c815500962"],
+  "DeptID": "35c3a908-8286-4d65-9a8e-254473447f7c",
+  "UploaderID": "768fcaf1-359b-423b-ba9a-51ca38fcc574",
+  "Path": null
+}
+
+POST /13ed4be3-ae82-4e65-8370-986656fc8e63_file/_doc/88d78af5-484c-4e87-8538-a052b51eb516
+{
+  "FileID": "88d78af5-484c-4e87-8538-a052b51eb516",
+  "Name": "chuong_5",
+  "Criteria": ["co_so_du_lieu"],
+  "CreatedDate": "2024-02-13T00:00:00.000Z",
+  "Description": "Slide chương 5 môn Cơ sở dữ liệu",
+  "HashValue": "781fd7b69f84da3d939a80fc9a746ba4d2a053efd4361778165c8d4a9d80c015",            
+  "Author": "PhuocDat",
+  "Type": "pdf",
+  "Size": "50",
+  "Deleted": false,
+  "Status": "Active",
+  "IsPrivate": false,
+  "NewValue": null,
+  "SharedDeptID": [],
+  "DeptID": "35c3a908-8286-4d65-9a8e-254473447f7c",
+  "UploaderID": "ec764dcd-534c-4e5e-9203-88eb7404c2ab",
+  "Path": null
+}
+
+POST /13ed4be3-ae82-4e65-8370-986656fc8e63_file/_doc/f91654fd-1976-44e6-bdde-fb471d2f00bc
+{
+  "FileID": "f91654fd-1976-44e6-bdde-fb471d2f00bc",
+  "Name": "Don xin nghi viec",
+  "Criteria": ["hành_chính", "đơn", "đơn_thôi_việc"],
+  "CreatedDate": "2024-02-15T00:00:00.000Z",
+  "Description": "Đơn xin nghỉ việc của nhân viên Phan Hồng Đức",
+  "HashValue": "70a5f72f45c57af1ba1bb3c84cb648a7a66a08d5e8842b56e0a49bd95f889fa9",            
+  "Author": "PhuocDat",
+  "Type": "pdf",
+  "Size": "123",
+  "Deleted": false,
+  "Status": "Active",
+  "IsPrivate": false,
+  "NewValue": null,
+  "SharedDeptID": ["94e2f1e0-d9b3-43d9-8747-f8c815500962", "4a18307d-a2d4-4c01-b7d1-3da5c08645dc"],
+  "DeptID": "35c3a908-8286-4d65-9a8e-254473447f7c",
+  "UploaderID": "ec764dcd-534c-4e5e-9203-88eb7404c2ab",
+  "Path": ["Hành chính/Đơn/Đơn thôi việc"]
+}
