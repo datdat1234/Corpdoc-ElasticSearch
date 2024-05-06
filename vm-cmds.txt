@@ -101,3 +101,7 @@ Ctrl + A / Ctrl + D
 // Kill screens
 
 screen -ls | grep pts | cut -d. -f1 | awk '{print $1}' | xargs kill
+
+// Fix postgres package error
+
+apt-get install libpcap-dev libpq-dev
