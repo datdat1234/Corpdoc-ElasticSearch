@@ -46,6 +46,11 @@ sudo apt install docker-ce
 sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 
+cd /usr/share/fonts/truetype
+sudo mkdir arial
+cd arial
+sudo wget https://github.com/gasharper/linux-fonts/raw/master/arial.ttf
+
 cd ..
 cd corpdoc-es/
 sudo docker-compose up -d
@@ -81,6 +86,10 @@ python3 -m pip install -r requirements.txt
 uvicorn src.main:app --reload --port=8000 --host=0.0.0.0
 
 uvicorn src.main:app --reload --port=9000 --host=0.0.0.0
+
+////////////////////////////////////////////////////////////
+
+Nhớ set path cho font Arial tại file createNewPDF.py
 
 ////////////////////////////////////////////////////////////
 
