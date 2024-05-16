@@ -58,6 +58,9 @@ PUT /companyId_file
       },
       "Path": {
         "type": "text"
+      },
+      "UpdatedDate": {
+        "type": "date"
       }
     }
   }
