@@ -106,6 +106,9 @@ PUT /companyId_folder
       },
       "CreatorID": {
         "type": "text"
+      },
+      "UpdatedDate": {
+        "type": "date"
       }
     }
   }
@@ -131,7 +134,8 @@ POST /companyId_file/_doc/_id
   "SharedDeptID": ,
   "DeptID": ,
   "UploaderID": ,
-  "Path": 
+  "Path": ,
+  "UpdatedDate": 
 }
 
 POST /companyId_folder/_doc/_id
@@ -146,7 +150,8 @@ POST /companyId_folder/_doc/_id
   "IsPrivate": ,
   "SharedDeptID": ,
   "DeptID": ,
-  "CreatorID": 
+  "CreatorID": ,
+  "UpdatedDate": 
 }
 
 - Update Document
@@ -251,7 +256,8 @@ POST /13ed4be3-ae82-4e65-8370-986656fc8e63_folder/_doc/1012645c-7ed3-40ed-bbbe-b
   "IsPrivate": false,
   "SharedDeptID": [],
   "DeptID": "35c3a908-8286-4d65-9a8e-254473447f7c",
-  "CreatorID": "768fcaf1-359b-423b-ba9a-51ca38fcc574"
+  "CreatorID": "768fcaf1-359b-423b-ba9a-51ca38fcc574",
+  "UpdatedDate": "2024-02-15T00:00:00.000Z",
 }
 
 POST /13ed4be3-ae82-4e65-8370-986656fc8e63_folder/_doc/3eb9d2c7-3717-4d6f-8c11-76ae455b0b04
@@ -266,7 +272,8 @@ POST /13ed4be3-ae82-4e65-8370-986656fc8e63_folder/_doc/3eb9d2c7-3717-4d6f-8c11-7
   "IsPrivate": false,
   "SharedDeptID": ["4a18307d-a2d4-4c01-b7d1-3da5c08645dc", "94e2f1e0-d9b3-43d9-8747-f8c815500962"],
   "DeptID": "35c3a908-8286-4d65-9a8e-254473447f7c",
-  "CreatorID": "768fcaf1-359b-423b-ba9a-51ca38fcc574"
+  "CreatorID": "768fcaf1-359b-423b-ba9a-51ca38fcc574",
+  "UpdatedDate": "2024-02-15T00:00:00.000Z",
 }
 
 POST /13ed4be3-ae82-4e65-8370-986656fc8e63_file/_doc/29fe90c1-1a45-41e7-a528-23c661467ddd
@@ -287,7 +294,8 @@ POST /13ed4be3-ae82-4e65-8370-986656fc8e63_file/_doc/29fe90c1-1a45-41e7-a528-23c
   "SharedDeptID": ["4a18307d-a2d4-4c01-b7d1-3da5c08645dc"],
   "DeptID": "35c3a908-8286-4d65-9a8e-254473447f7c",
   "UploaderID": "768fcaf1-359b-423b-ba9a-51ca38fcc574",
-  "Path": null
+  "Path": null,
+  "UpdatedDate": "2024-02-15T00:00:00.000Z",
 }
 
 POST /13ed4be3-ae82-4e65-8370-986656fc8e63_file/_doc/51d9b58d-a83b-4a8c-88f1-c4515663a9a0
@@ -308,7 +316,8 @@ POST /13ed4be3-ae82-4e65-8370-986656fc8e63_file/_doc/51d9b58d-a83b-4a8c-88f1-c45
   "SharedDeptID": ["94e2f1e0-d9b3-43d9-8747-f8c815500962"],
   "DeptID": "35c3a908-8286-4d65-9a8e-254473447f7c",
   "UploaderID": "768fcaf1-359b-423b-ba9a-51ca38fcc574",
-  "Path": null
+  "Path": null,
+  "UpdatedDate": "2024-02-15T00:00:00.000Z",
 }
 
 POST /13ed4be3-ae82-4e65-8370-986656fc8e63_file/_doc/88d78af5-484c-4e87-8538-a052b51eb516
@@ -329,7 +338,8 @@ POST /13ed4be3-ae82-4e65-8370-986656fc8e63_file/_doc/88d78af5-484c-4e87-8538-a05
   "SharedDeptID": [],
   "DeptID": "35c3a908-8286-4d65-9a8e-254473447f7c",
   "UploaderID": "ec764dcd-534c-4e5e-9203-88eb7404c2ab",
-  "Path": null
+  "Path": null,
+  "UpdatedDate": "2024-02-15T00:00:00.000Z",
 }
 
 POST /13ed4be3-ae82-4e65-8370-986656fc8e63_file/_doc/f91654fd-1976-44e6-bdde-fb471d2f00bc
@@ -350,5 +360,6 @@ POST /13ed4be3-ae82-4e65-8370-986656fc8e63_file/_doc/f91654fd-1976-44e6-bdde-fb4
   "SharedDeptID": ["94e2f1e0-d9b3-43d9-8747-f8c815500962", "4a18307d-a2d4-4c01-b7d1-3da5c08645dc"],
   "DeptID": "35c3a908-8286-4d65-9a8e-254473447f7c",
   "UploaderID": "ec764dcd-534c-4e5e-9203-88eb7404c2ab",
-  "Path": ["Hành chính/Đơn/Đơn thôi việc"]
+  "Path": ["Hành chính/Đơn/Đơn thôi việc"],
+  "UpdatedDate": "2024-02-15T00:00:00.000Z",
 }
