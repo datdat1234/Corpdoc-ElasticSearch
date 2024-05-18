@@ -1,10 +1,10 @@
 ////////////////////////////////////////////////////////////
 
+sudo apt-get install git
+
 mkdir corpdoc
 
 cd corpdoc/
-
-sudo apt-get install git
 
 mkdir corpdoc-ocr
 mkdir corpdoc-langchain
